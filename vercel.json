@@ -1,0 +1,26 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/ascii-hover",
+      "destination": "https://david-lafond-designs.vercel.app/ascii-hover"
+    },
+    {
+      "source": "/ascii-hover.html",
+      "destination": "https://david-lafond-designs.vercel.app/ascii-hover"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Permissions-Policy",
+          "value": "display-capture=(self)"
+        }
+      ]
+    }
+  ]
+}
